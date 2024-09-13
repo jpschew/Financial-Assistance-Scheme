@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "04649d48-a544-4f0f-bf65-414ca4e9f66f",
+		"name": "Financial Assistance Scheme",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11222781"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"p@ssw0rd123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ADMIN\",\n    \"username\": \"admin\",\n    \"password\": \"p@ssw0rd123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/create_admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"create_admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllApplicants",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDUyMjc4fQ.WqvmPWXeffZ8OIdrArAvV90-wquEvANqh1ovetFU2HE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/applicants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateApplicant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDQ5NzYxfQ.XfelHz65_2NPFxidRC331rZM7-SGgKwuQHdeF0YreCI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Johnson\",\n    \"last_name\": \"Tan\",\n    \"nric\": \"S7638590D\",\n    \"employment_status\": 2,\n    \"martial_status\": 3,\n    \"sex\": 0,\n    \"date_of_birth\": \"1976-06-12\",\n    \"household\": [\n        {\n                \"first_name\": \"Johnny\",\n                \"last_name\": \"Tan\",\n                \"nric\": \"T1637581G\",\n                \"relation\": \"son\",\n                \"sex\": 0,\n                \"date_of_birth\": \"2016-09-12\"\n        },\n        {\n                \"first_name\": \"Jenny\",\n                \"last_name\": \"Tan\",\n                \"nric\": \"T0498374I\",\n                \"relation\": \"daughter\",\n                \"sex\": 1,\n                \"date_of_birth\": \"2004-04-28\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applicants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applicants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSchemes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDUzODc5fQ.JzhmEP6l3qgZBDBPZPPe2XwdMlazLscGgN3Q95HTAYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/schemes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"schemes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEligibleScheme",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDUzODc5fQ.JzhmEP6l3qgZBDBPZPPe2XwdMlazLscGgN3Q95HTAYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/schemes/eligible?applicant_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"schemes",
+						"eligible"
+					],
+					"query": [
+						{
+							"key": "applicant_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateScheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDUzODc5fQ.JzhmEP6l3qgZBDBPZPPe2XwdMlazLscGgN3Q95HTAYM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Financial Assistance for Single Parent Scheme\",\n    \"description\": \"Financial assistance for single parent with children\",\n    \"employment_status\": 0,\n    \"martial_status\": 1,\n    \"children_status\": 1,\n    \"benefits\": [\n        {\n            \"name\": \"Monthly Financial Assistance\",\n            \"amount\": 1000\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/schemes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"schemes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllApplications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDQ5NzYxfQ.XfelHz65_2NPFxidRC331rZM7-SGgKwuQHdeF0YreCI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/applications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateApplication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDQ5NzYxfQ.XfelHz65_2NPFxidRC331rZM7-SGgKwuQHdeF0YreCI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nric\": \"S1234567G\",\n    \"scheme_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/applications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateApplication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzI2MDQ5NzYxfQ.XfelHz65_2NPFxidRC331rZM7-SGgKwuQHdeF0YreCI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"application_id\": 1,\n    \"status\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/update_application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"update_application"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
